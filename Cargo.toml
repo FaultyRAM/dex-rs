@@ -1,0 +1,26 @@
+[package]
+name = "dex"
+version = "0.1.0"
+authors = ["FaultyRAM <explodingpsu@gmail.com>"]
+description = "A simple multimedia decoding library."
+repository = "https://github.com/FaultyRAM/dex-rs"
+readme = "README.md"
+keywords = ["decoder", "media", "video", "audio"]
+categories = ["multimedia::encoding"]
+license = "Apache-2.0 OR MIT"
+
+[dependencies.failure]
+version = "0.1"
+
+[dependencies.ffmpeg-sys]
+version = "3"
+default-features = false
+features = ["avformat"]
+
+[dependencies.clippy]
+version = "0.0"
+optional = true
+
+[features]
+default = []
+nightly = ["clippy"]
